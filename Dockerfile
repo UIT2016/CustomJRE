@@ -2,8 +2,7 @@
 FROM alpine:3.18
 # 复制JDK压缩包到镜像中
 COPY OpenJDK17U-jre_x64_alpine-linux_hotspot_17.0.9_9.tar.gz /tmp/openjdk.tar.gz
-# 复制JDK压缩包到镜像中
-COPY openjdk.tar.gz /tmp/openjdk.tar.gz
+
 
 # 设置环境变量
 ENV JAVA_HOME=/opt/jdk
