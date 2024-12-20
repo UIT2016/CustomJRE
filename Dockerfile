@@ -1,7 +1,7 @@
 # 使用Alpine 3.18作为基础镜像
 FROM alpine:3.18
-#下载jdk
-RUN wget "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.9%2B9/OpenJDK17U-jre_x64_alpine-linux_hotspot_17.0.9_9.tar.gz" -O ./openjdk.tar.gz
+# 复制JDK压缩包到镜像中
+COPY OpenJDK17U-jre_x64_alpine-linux_hotspot_17.0.9_9.tar.gz /tmp/openjdk.tar.gz
 # 复制JDK压缩包到镜像中
 COPY openjdk.tar.gz /tmp/openjdk.tar.gz
 
